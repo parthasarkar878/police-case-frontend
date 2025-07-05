@@ -9,7 +9,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post("https://police-case-backend.onrender.com/api/auth/login", {
         userId,
         password,
       });
