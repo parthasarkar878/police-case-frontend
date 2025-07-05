@@ -17,7 +17,7 @@ export default function EditCase() {
   useEffect(() => {
     const token = prompt("Enter your token:");
     axios
-      .get(`http://localhost:5000/api/case/all`, {
+      .get(`https://police-case-backend.onrender.com/api/case/all`, {
         headers: { Authorization: token },
       })
       .then((res) => {
@@ -40,7 +40,7 @@ export default function EditCase() {
     const token = prompt("Enter your token again:");
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/case/progress/${id}`,
+        `https://police-case-backend.onrender.com/api/case/progress/${id}`,
         {
           updateText,
           status,

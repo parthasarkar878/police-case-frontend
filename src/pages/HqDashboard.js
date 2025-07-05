@@ -7,7 +7,7 @@ export default function HqDashboard() {
   useEffect(() => {
     const token = prompt("Enter your token:");
     axios
-      .get("http://localhost:5000/api/case/all", {
+      .get("https://police-case-backend.onrender.com/api/case/all", {
         headers: { Authorization: token },
       })
       .then((res) => {

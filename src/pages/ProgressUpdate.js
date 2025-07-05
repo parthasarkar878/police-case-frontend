@@ -10,7 +10,7 @@ function ProgressUpdate() {
     const token = prompt("Enter your token:");
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/case/progress/${caseId}`,
+        `https://police-case-backend.onrender.com/api/case/progress/${caseId}`,
         {
           updateText,
         },
